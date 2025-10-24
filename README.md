@@ -1,16 +1,43 @@
-## Hi there 👋
+# Hi there, I'm st93642! 👋
 
-<!--
-**st93642/st93642** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 🚀 About Me
 
-Here are some ideas to get you started:
+Welcome to my GitHub profile! I'm a passionate developer who loves building innovative solutions and contributing to open-source projects.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🔭 What I'm Working On
+
+- Building scalable applications
+- Exploring new technologies and frameworks
+- Contributing to open-source projects
+- Learning and growing as a developer
+
+## 🌱 Currently Learning
+
+- Advanced software architecture patterns
+- Cloud-native technologies
+- DevOps and CI/CD practices
+- Modern web development frameworks
+
+## 💻 Tech Stack
+
+- **Languages:** Python, JavaScript, Java, Go
+- **Frameworks:** React, Node.js, Spring Boot
+- **Tools:** Git, Docker, Kubernetes
+- **Databases:** PostgreSQL, MongoDB, Redis
+
+## 📊 GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=st93642&show_icons=true&theme=radical)
+
+## 🤝 Let's Connect
+
+- 💬 Feel free to reach out for collaborations or just a chat about tech
+- 📫 Find me on GitHub: [@st93642](https://github.com/st93642)
+
+## ⚡ Fun Fact
+
+Code is poetry, and every commit tells a story!
+
+---
+
+*Thanks for visiting! Have a great day! 😊*
