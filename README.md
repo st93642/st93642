@@ -2,15 +2,10 @@
 
 ### About Me
 
-I'm a Computer Science student specializing in Software Engineering with a strong passion for cybersecurity, software development, and continuous learning. Currently pursuing my Bachelor of Science in Software Engineering at Transport and Telecommunication Institute (TSI) in Latvia.
-
-**Location:** Latvia  
-**Headline:** Software engineering student
+I'm a Computer Science student specializing in Software Engineering with a strong passion for cybersecurity, software development, and continuous learning. Currently pursuing my Bachelor of Science in Software Engineering.
 
 ### Education
 
-- **Bachelor of Science - BS, Software Engineering**  
-  Transport and Telecommunication Institute (TSI), Aug 2025 - Jul 2030
 - **Associate's degree, Software Engineering**  
   42 Wolfsburg, Feb 2021 - May 2023 (Remote Study Trial Supporter)
 - **Associate's degree, Navigation**  
@@ -50,7 +45,7 @@ I'm a Computer Science student specializing in Software Engineering with a stron
 
 ### Projects
 
-- **Minishell** - Recreation of bash/shell environment for Linux-like systems with basic functionality (Dec 2021 - Jan 2022)
+- **Minishell** - Recreation of bash/shell environment for Linux systems with basic functionality (Dec 2021 - Jan 2022)
 
 My interests span across:
 
@@ -60,7 +55,5 @@ My interests span across:
 - 📚 Continuous learning and skill development
 
 This GitHub profile serves as a showcase of my learning journey, projects, and technical growth in the field of software engineering and cybersecurity.
-
-### TryHackMe Profile
 
 ![Your Image Badge](https://tryhackme-badges.s3.amazonaws.com/gr4ndf4th3r.png)
