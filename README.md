@@ -63,4 +63,4 @@ This GitHub profile serves as a showcase of my learning journey, projects, and t
 
 ### TryHackMe Profile
 
-[![TryHackMe](https://tryhackme-badges.s3.amazonaws.com/gr4ndf4th3r.png)](https://tryhackme.com/p/2277462)
+![Your Image Badge](https://tryhackme-badges.s3.amazonaws.com/gr4ndf4th3r.png)
