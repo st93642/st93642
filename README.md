@@ -6,4 +6,4 @@ Welcome to my GitHub profile! I'm passionate about cybersecurity, software devel
 
 ### TryHackMe Profile
 
-<iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2277462" style='border:none;'></iframe>
+[![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/2277462.png)](https://tryhackme.com/p/2277462)
