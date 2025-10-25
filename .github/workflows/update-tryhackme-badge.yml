@@ -1,0 +1,69 @@
+name: Update TryHackMe Badge
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches: [ master ]
+    paths:
+      - '.github/workflows/update-tryhackme-badge.yml'
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Fetch TryHackMe Badge
+      run: |
+        # Create badges directory if it doesn't exist
+        mkdir -p assets/badges
+
+        # Try to fetch the badge from TryHackMe API
+        curl -s "https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2277462" \
+          -H "Accept: image/png" \
+          -o assets/badges/tryhackme-badge.png
+
+        # If the API doesn't return PNG directly, try the S3 URL
+        if [ ! -s assets/badges/tryhackme-badge.png ]; then
+          echo "Direct API call failed, trying S3 URL..."
+          curl -s "https://tryhackme-badges.s3.amazonaws.com/gr4ndf4th3r.png" \
+            -o assets/badges/tryhackme-badge.png
+        fi
+
+        # Check if we got a valid image
+        if [ -s assets/badges/tryhackme-badge.png ]; then
+          echo "Badge downloaded successfully"
+          file assets/badges/tryhackme-badge.png
+        else
+          echo "Failed to download badge"
+          exit 1
+        fi
+
+    - name: Update README with new badge
+      run: |
+        # Get current date for cache busting
+        DATE=$(date +%Y%m%d_%H%M%S)
+
+        # Update the README.md to use the local badge with cache busting
+        sed -i "s|![Your Image Badge](https://tryhackme-badges.s3.amazonaws.com/gr4ndf4th3r.png)|![TryHackMe Badge](assets/badges/tryhackme-badge.png?v=$DATE)|g" README.md
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+
+        # Check if there are changes to commit
+        if git diff --quiet; then
+          echo "No changes to commit"
+        else
+          git add assets/badges/tryhackme-badge.png README.md
+          git commit -m "Update TryHackMe badge [automated]"
+          git push
+        fi
