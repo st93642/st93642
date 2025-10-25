@@ -1,0 +1,90 @@
+name: Manual Badge Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      badge_type:
+        description: 'Type of badge to update'
+        required: true
+        default: 'tryhackme'
+        type: choice
+        options:
+        - tryhackme
+        - all
+
+jobs:
+  manual-update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Update TryHackMe Badge
+      if: ${{ inputs.badge_type == 'tryhackme' || inputs.badge_type == 'all' }}
+      run: |
+        mkdir -p assets/badges
+
+        # Try multiple sources for the badge
+        echo "Attempting to fetch TryHackMe badge..."
+
+        # Method 1: Direct S3 URL
+        if curl -s -f "https://tryhackme-badges.s3.amazonaws.com/gr4ndf4th3r.png" -o "assets/badges/tryhackme-badge.png"; then
+          echo "✅ Badge downloaded from S3"
+        else
+          echo "❌ S3 download failed, trying API..."
+
+          # Method 2: Use a simple HTML to image service (if available)
+          # For now, create a placeholder badge
+          cat > create_badge.py << 'EOF'
+          from PIL import Image, ImageDraw, ImageFont
+          import requests
+          from io import BytesIO
+
+          # Create a simple badge image
+          img = Image.new('RGB', (300, 60), color='#2F3136')
+          draw = ImageDraw.Draw(img)
+
+          # Try to get some basic info from TryHackMe API
+          try:
+              response = requests.get('https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2277462', timeout=10)
+              if 'gr4ndf4th3r' in response.text:
+                  text = "TryHackMe: gr4ndf4th3r"
+              else:
+                  text = "TryHackMe Profile"
+          except:
+              text = "TryHackMe Profile"
+
+          # Draw text
+          try:
+              font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 16)
+          except:
+              font = ImageFont.load_default()
+
+          draw.text((10, 20), text, fill='white', font=font)
+          img.save('assets/badges/tryhackme-badge.png')
+          print("✅ Placeholder badge created")
+          EOF
+
+          python3 create_badge.py
+        fi
+
+    - name: Update README cache
+      run: |
+        DATE=$(date +%Y%m%d_%H%M%S)
+        sed -i "s|assets/badges/tryhackme-badge.png?v=[0-9_]*|assets/badges/tryhackme-badge.png?v=$DATE|g" README.md
+
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+
+        if git diff --quiet && git diff --cached --quiet; then
+          echo "No changes to commit"
+        else
+          git add assets/badges/ README.md
+          git commit -m "Manual badge update: ${{ inputs.badge_type }} [automated]"
+          git push
+        fi
