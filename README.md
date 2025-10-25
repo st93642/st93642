@@ -103,3 +103,22 @@ My interests span across:
 This GitHub profile serves as a showcase of my learning journey, projects, and technical growth in the field of software engineering and cybersecurity.
 
 ![TryHackMe Badge](assets/badges/tryhackme-badge.png)
+
+---
+
+## 🔄 Dynamic Badge System
+
+This repository uses automated workflows to keep badges updated
+
+- **TryHackMe Badge**: Automatically updated daily at 2 AM UTC via GitHub Actions
+- **Manual Updates**: Can be triggered manually through GitHub Actions UI
+- **Fallback System**: Multiple methods ensure badge availability even if primary sources fail
+
+### How it works
+
+1. **Scheduled Updates**: GitHub Actions runs daily to fetch the latest badge
+2. **Browser Automation**: Uses Playwright to capture badge screenshots from TryHackMe
+3. **Cache Busting**: README includes timestamps to force browser refresh
+4. **Fallback Methods**: If primary capture fails, uses backup sources
+
+To manually update badges, go to **Actions** → **Manual Badge Update** → **Run workflow**.
