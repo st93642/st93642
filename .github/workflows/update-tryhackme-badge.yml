@@ -1,5 +1,7 @@
 name: Update TryHackMe Badge
-
+permissions:
+  contents: write
+  
 on:
   schedule:
     # Run daily at 2 AM UTC
