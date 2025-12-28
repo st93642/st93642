@@ -60,7 +60,7 @@ I'm a Computer Science student specializing in Software Engineering with a stron
 ### Professional Experience
 
 - **Application Development Analyst**  
-  Accenture Baltics, Riga, Latvia | Jul 2022 - Jan 2023
+  Accenture Baltics, Riga, Latvia | Jan 2022 - Jan 2023
 - **Software Engineering Student**  
   42 Wolfsburg, Wolfsburg, Lower Saxony, Germany | Feb 2021 - Aug 2022
 - **Third Officer**  
