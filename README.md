@@ -102,4 +102,4 @@ My interests span across:
 
 This GitHub profile serves as a showcase of my learning journey, projects, and technical growth in the field of software engineering and cybersecurity.
 
-![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/gr4ndf4th3r.png)
+![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/gr4ndf4th3r.)
