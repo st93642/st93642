@@ -2,7 +2,7 @@
 
 ### About Me
 
-I'm a Computer Science student specializing in Software Engineering with a strong passion for cybersecurity, software development, and continuous learning. Currently pursuing my Bachelor of Science in Software Engineering.
+Currently pursuing my Bachelor of Science in Software Engineering.
 
 ### 📊 GitHub Stats
 
