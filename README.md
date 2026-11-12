@@ -2,7 +2,7 @@
 
 ### About Me
 
-Currently pursuing my Bachelor of Science in Software Engineering.
+Bachelor of Science in Software Engineering.
 
 ### 📊 GitHub Stats
 
@@ -50,23 +50,6 @@ Currently pursuing my Bachelor of Science in Software Engineering.
   <img src="https://img.shields.io/badge/freeCodeCamp-0A0A23?style=for-the-badge&logo=freecodecamp&logoColor=white" alt="freeCodeCamp"/>
 </p>
 
-### Education
-
-- **Associate's degree, Software Engineering**  
-  42 Wolfsburg, Feb 2021 - May 2023 (Remote Study Trial Supporter)
-- **Associate's degree, Navigation**  
-  Marine Technical College of St. Petersburg, 2009 - 2013 (Navigator class, Deep Sea navigation)
-
-### Professional Experience
-
-- **Application Development Analyst**  
-  Accenture Baltics, Riga, Latvia | Jan 2022 - Jan 2023
-- **Software Engineering Student**  
-  42 Wolfsburg, Wolfsburg, Lower Saxony, Germany | Feb 2021 - Aug 2022
-- **Third Officer**  
-  Nordic Tankers Marine A/S, Denmark | Jun 2012 - Jul 2020  
-  Officer Of The Watch / Navigational / Cargo operations
-
 ### Skills & Technologies
 
 **Programming & Development:** C, C++, JavaScript, Ruby, Ruby on Rails, HTML5, CSS, Bootstrap, SQL, Databases, Git, GitHub, Bash, Linux
@@ -89,17 +72,11 @@ Currently pursuing my Bachelor of Science in Software Engineering.
 - **Microverse Ruby/Databases Module** - Microverse (Nov 2020)
 - Multiple Coursera certifications including Generative AI, Data Privacy, Time Management, and more
 
-### Projects
-
-- **Minishell** - Recreation of bash/shell environment for Linux systems with basic functionality (Dec 2021 - Jan 2022)
-
 My interests span across:
 
-- 🔐 Cybersecurity and ethical hacking
+- 🔐 Cybersecurity
 - 💻 Software development and engineering
 - 🛠️ Problem-solving through code
 - 📚 Continuous learning and skill development
-
-This GitHub profile serves as a showcase of my learning journey, projects, and technical growth in the field of software engineering and cybersecurity.
 
 ![Badge](https://tryhackme-badges.s3.amazonaws.com/gr4ndf4th3r.png)
